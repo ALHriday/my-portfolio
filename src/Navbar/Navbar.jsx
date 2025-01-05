@@ -5,7 +5,7 @@ const Navbar = () => {
     const links = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/contact'>Contact</Link></li>
     </>
 
 
@@ -33,7 +33,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="text-2xl px-2 md:px-4 py-2 font-extrabold text-teal-600">AUH</a>
+                <a className="text-3xl px-2 md:px-4 py-2 font-extrabold text-teal-600">AUH</a>
             </div>
             <div className="navbar-center hidden lg:flex">
 
@@ -67,7 +67,7 @@ const Navbar = () => {
                         </svg>
                     </label>
                 </div>
-                <a className="btn bg-teal-700 text-slate-100">Download Resume</a>
+                <a className="btn btn-md bg-teal-700 text-slate-100">Download Resume</a>
             </div>
         </div>
     );
