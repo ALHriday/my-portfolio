@@ -6,7 +6,7 @@ const AboutMe = () => {
 
             <div className="py-6 px-4 flex flex-col gap-3 text-center text-wrap">
                 <p>
-                    Hi, I’m Alauddin Hriday, a web developer passionate about crafting functional and visually appealing websites. My projects include Sportify Hub, Dream 11, CareerCounseling, and SmartLearn, showcasing my versatility and creativity.
+                    Hi, I’m <strong>Alauddin Hriday</strong>, a web developer passionate about crafting functional and visually appealing websites. My projects include Sportify Hub, Dream 11, CareerCounseling, and SmartLearn, showcasing my versatility and creativity.
                 </p>
                 <p>
                     Beyond coding, I love traveling, playing football and badminton, and exploring new technologies to stay ahead in the digital world.
