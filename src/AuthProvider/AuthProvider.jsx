@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const AuthContext = createContext(null);
+export const AuthContext = createContext('light');
 
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
@@ -13,9 +13,8 @@ const AuthProvider = ({ children }) => {
         loading,
         setLoading,
         user,
-        setUser
+        setUser,
     }
-
 
     return (
         <AuthContext.Provider value={values}>

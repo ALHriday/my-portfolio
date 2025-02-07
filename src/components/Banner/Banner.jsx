@@ -1,52 +1,85 @@
+import { Link } from 'react-router-dom';
+import hridayImg from '../../assets/hriday.png'
+import { motion } from 'framer-motion';
 
 const Banner = () => {
     const name = `
           Alauddin Hriday
-          * FontEnd Developer...
+          * FrontEnd Developer...
           * Your Vision, My Code.
     `;
+
+
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 p-4 gap-6 md:gap-0">
             <div className="flex flex-col order-2 md:order-1 justify-center items-center md:items-start gap-3">
-                <h1 className="text-4xl font-bold"><span className="text-teal-500">Web</span> Developer</h1>
-                <p className="text-xl">
-                    Building Beautiful User Journeys. <br />
-                    {/* Pixels with a Purpose. <br />
-                    Turning Designs into Delight. <br />
-                    Crafting Interfaces, One Line at a Time. <br />
-                    Where Creativity Meets Code. <br />
-                    Building Beautiful User Journeys. <br />
-                    Your Vision, My Code. <br />
-                    Frontlines of the Web Experience. <br />
-                    Design the Future, Code the Present. <br />
-                    Bringing Ideas to the Browser. */}
-                </p>
-                <div className="flex gap-2">
-                    <div className="w-9 h-9 rounded-full">
-                        <a href="https://web.facebook.com">
-                            <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="" />
-                        </a>
-                    </div>
-                    <div className="w-9 h-9 rounded-full">
-                        <a href="https://www.instagram.com">
-                            <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="" />
-                        </a>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }} // starting state
+                    animate={{ opacity: 2, y: 0 }}    // animated state
+                    transition={{ duration: 1.5 }}    // transition settings
+                ><h1 className="text-4xl font-bold"><span className="text-teal-500">Web</span> Developer</h1>
+                </motion.div>
 
-                    </div>
-                    <div className="w-9 h-9 rounded-full">
-                        <a href="https://www.linkedin.com">
-                            <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="" />
-                        </a>
-                    </div>
-                    <div className="w-9 h-9 rounded-full">
-                        <a href="https://github.com">
-                            <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=E2KVOMc77Geo&format=png&color=000000" alt="" />
-                        </a>
-                    </div>
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1.0 }}
+                ><p className="text-xl">
+                        Building Beautiful User Journeys. <br />
+                    </p>
+                </motion.div>
+
+                <div className="flex gap-2">
+                    <motion.div
+                        initial={{ opacity: 0, x: -90 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.0 }}
+                    ><div className="w-9 h-9 rounded-full">
+                            <a href="https://web.facebook.com">
+                                <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="" />
+                            </a>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: -70 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.0 }}
+                    ><div className="w-9 h-9 rounded-full">
+                            <a href="https://www.instagram.com">
+                                <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="" />
+                            </a>
+                        </div>
+                    </motion.div>
+
+
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.0 }}
+                    ><div className="w-9 h-9 rounded-full">
+                            <a href="https://www.linkedin.com">
+                                <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="" />
+                            </a>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.0 }}
+                    ><div className="w-9 h-9 rounded-full">
+                            <a href="https://github.com">
+                                <img className="w-full h-full rounded-full border-2 border-teal-600 bg-slate-200 hover:bg-teal-400 cursor-pointer" src="https://img.icons8.com/?size=100&id=E2KVOMc77Geo&format=png&color=000000" alt="" />
+                            </a>
+                        </div>
+                    </motion.div>
+
+
                 </div>
-                <div className="mt-1">
-                    <button className="btn btn-sm bg-teal-700 text-slate-200">Download Resume</button>
+                <div className="mt-2 md:mt-1">
+                    <Link className="btn md:btn-sm bg-teal-700 text-slate-200" to='https://drive.google.com/open?id=1WTi-O8jkmUePYvi48BOXAi_Fo5MW6NCB&usp=drive_fs'>Download Resume</Link>
                 </div>
             </div>
 
@@ -57,7 +90,7 @@ const Banner = () => {
                     </div>
                     <div className="shadow-lg rounded-full w-48 h-48  absolute top-[10%] left-[10%] p-4">
 
-                        <img title={name} className="w-full h-full rounded-full hover:border-2" src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                        <img title={name} className="w-full h-full rounded-full hover:border-2 object-cover" src={hridayImg} alt="" />
                         <div className="relative">
                             <div className="bg-green-500 w-4 h-4 rounded-full absolute border-2 bottom-3 right-5"></div>
                         </div>

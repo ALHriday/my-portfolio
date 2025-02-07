@@ -1,4 +1,6 @@
 import Card from "../../Shared/Card";
+import { motion } from 'framer-motion';
+
 
 const Skills = () => {
     return (
@@ -6,15 +8,21 @@ const Skills = () => {
 
             <h1 className="text-4xl font-bold text-teal-600 text-center col-span-1 md:col-span-2 lg:col-span-3 my-6">Skills</h1>
             <p className="text-center">I am proficient in a range of technologies that allow me <br /> to build efficient, scalable, and responsive web applications. <br /> My skills include: </p>
-               
+
             <div className="mt-4">
                 <h1 className="text-3xl font-bold border-b-2 mb-2 py-2">FontEnd Tools</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
-                    <Card
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: -50 }} // starting state
+                        animate={{ opacity: 2, y: 0 }}    // animated state
+                        transition={{ duration: 1.5 }}    // transition settings
+                    ><Card
                         name='HTML'
                         image='https://img.icons8.com/?size=100&id=20909&format=png&color=000000'
                         description='The standard markup language for creating web pages and applications.'
                     ></Card>
+                    </motion.div>
+
                     <Card
                         name='CSS3'
                         image='https://img.icons8.com/?size=100&id=21278&format=png&color=000000'
@@ -41,7 +49,7 @@ const Skills = () => {
             <div className="my-6">
                 <h1 className="text-3xl font-bold border-b-2 mb-2 py-2">BackEnd Tools</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
                     <Card
                         name='Node.JS'
                         image='https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000'

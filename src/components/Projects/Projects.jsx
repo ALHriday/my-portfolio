@@ -2,6 +2,8 @@ import peddyAdoption from '../../assets/Peddy-adoption-web.png'
 import careerCounseling from '../../assets/CareerCounseling-web.png'
 import smartLearn from '../../assets/SmartLearn-web.png'
 import ProjectCard from '../../Shared/ProjectCard';
+
+
 const Projects = () => {
     return (
         <div className="p-4 py-12 w-full md:w-10/12 mx-auto">
@@ -13,15 +15,22 @@ const Projects = () => {
                 <ProjectCard
                     img={peddyAdoption}
                     name='HTML, CSS, Tailwind CSS, JavaScript.'
+                    liveLink='https://assignment6-peddy-web.netlify.app'
 
                 ></ProjectCard>
+
                 <ProjectCard
                     img={careerCounseling}
-                    name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'        
+                    name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'  
+                    liveLink='https://career-counseling-web.netlify.app'
+
                 ></ProjectCard>
+
                 <ProjectCard
                     img={smartLearn}
                     name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'
+                    liveLink='https://smart-learn-online-tutor.netlify.app'
+
                 ></ProjectCard>
             </div>
 

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const ProjectCard = ({ img, name}) => {
+const ProjectCard = ({ img, name, liveLink }) => {
     return (
         <div className='flex flex-col p-4 border-2 rounded-md bg-teal-600'>
             <div className='relative rounded-md'>
@@ -11,10 +11,9 @@ const ProjectCard = ({ img, name}) => {
                 <div className='absolute bottom-5 right-[24%] md:right-[40%]'>
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <div>
-                            <button className='btn btn-sm mr-2'>Live Link</button>
-                            <button className='btn btn-sm'>Github Link</button>
-                        </div>
-                        <div>
+                            <a href={liveLink}>
+                                <button className='btn mr-2'>Live Link</button>
+                            </a>
                             <button className='btn'>View Details</button>
                         </div>
                     </div>
@@ -22,7 +21,7 @@ const ProjectCard = ({ img, name}) => {
                 </div>
             </div>
             <div className='flex gap-2 mt-2 flex-wrap overflow-auto'>
-                <p className="btn btn-sm font-bold">Technology Used: { name }</p>
+                <p className="btn btn-sm font-bold">Technology Used: {name}</p>
             </div>
 
         </div>
@@ -31,7 +30,8 @@ const ProjectCard = ({ img, name}) => {
 
 ProjectCard.propTypes = {
     img: PropTypes.string,
-    name: PropTypes.string
+    name: PropTypes.string,
+    liveLink: PropTypes.string
 }
 
 export default ProjectCard;
