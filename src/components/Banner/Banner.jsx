@@ -9,8 +9,6 @@ const Banner = () => {
           * Your Vision, My Code.
     `;
 
-
-
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 p-4 gap-6 md:gap-0">
             <div className="flex flex-col order-2 md:order-1 justify-center items-center md:items-start gap-3">

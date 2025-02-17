@@ -2,6 +2,7 @@ import peddyAdoption from '../../assets/Peddy-adoption-web.png'
 import careerCounseling from '../../assets/CareerCounseling-web.png'
 import smartLearn from '../../assets/SmartLearn-web.png'
 import ProjectCard from '../../Shared/ProjectCard';
+// import { motion } from "framer-motion";
 
 
 const Projects = () => {
@@ -12,18 +13,18 @@ const Projects = () => {
                 <p>Explore Some of My Projects.</p>
             </div>
             <div className='flex flex-col gap-6 mt-4'>
-                <ProjectCard
-                    img={peddyAdoption}
-                    name='HTML, CSS, Tailwind CSS, JavaScript.'
-                    liveLink='https://assignment6-peddy-web.netlify.app'
-                    projectName={ 'Peddy Adoption'}
-                    projectDescription={"Find your perfect furry friend with our pet adoption website! Browse a variety of loving pets in need of a forever home, connect with shelters, and make adoption easy and hassle-free. Start your journey to pet parenthood today!"}
+                    <ProjectCard
+                        img={peddyAdoption}
+                        name='HTML, CSS, Tailwind CSS, JavaScript.'
+                        liveLink='https://assignment6-peddy-web.netlify.app'
+                        projectName={'Peddy Adoption'}
+                        projectDescription={"Find your perfect furry friend with our pet adoption website! Browse a variety of loving pets in need of a forever home, connect with shelters, and make adoption easy and hassle-free. Start your journey to pet parenthood today!"}
 
-                ></ProjectCard>
+                    ></ProjectCard>
 
                 <ProjectCard
                     img={careerCounseling}
-                    name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'  
+                    name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'
                     liveLink='https://career-counseling-web.netlify.app'
                     projectName={'Career Counseling'}
                     projectDescription={"Unlock your potential with our career counseling website! Get expert guidance, personalized career advice, and valuable resources to help you choose the right path, develop skills, and achieve your professional goals. Start your journey to success today!"}
