@@ -16,6 +16,8 @@ const Projects = () => {
                     img={peddyAdoption}
                     name='HTML, CSS, Tailwind CSS, JavaScript.'
                     liveLink='https://assignment6-peddy-web.netlify.app'
+                    projectName={ 'Peddy Adoption'}
+                    projectDescription={"Find your perfect furry friend with our pet adoption website! Browse a variety of loving pets in need of a forever home, connect with shelters, and make adoption easy and hassle-free. Start your journey to pet parenthood today!"}
 
                 ></ProjectCard>
 
@@ -23,6 +25,8 @@ const Projects = () => {
                     img={careerCounseling}
                     name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'  
                     liveLink='https://career-counseling-web.netlify.app'
+                    projectName={'Career Counseling'}
+                    projectDescription={"Unlock your potential with our career counseling website! Get expert guidance, personalized career advice, and valuable resources to help you choose the right path, develop skills, and achieve your professional goals. Start your journey to success today!"}
 
                 ></ProjectCard>
 
@@ -30,7 +34,8 @@ const Projects = () => {
                     img={smartLearn}
                     name='HTML, CSS, Tailwind CSS, JavaScript, React JS, Daisy UI.'
                     liveLink='https://smart-learn-online-tutor.netlify.app'
-
+                    projectName={'SmartLearn'}
+                    projectDescription={'SmartLearn is an innovative online education platform designed to connect students of all ages with expert tutors from around the world. It provides a seamless and personalized learning experience through interactive tools, tailored lesson plans, and 24/7 accessibility.'}
                 ></ProjectCard>
             </div>
 
