@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
-    const [active, setActive] = useState('home');
+    const [active, setActive] = useState('');
 
     const route = ['home', 'about', 'contact'];
 
@@ -29,7 +29,8 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {route.map((item, idx) => <li key={idx} onClick={() => setActive(item)} ><Link className={active === item ? 'border-b-2 border-teal-600' : ''} to={item}>{item.charAt(0).toUpperCase() + item.slice(1)}</Link></li>)}
+                            {route.map((item, idx) => <li key={idx} onClick={() => setActive(item)} ><Link className={active === item ? 'border-b-2 border-teal-600' : ''} to={item}>
+                                {item.charAt(0).toUpperCase() + item.slice(1)}</Link></li>)}
                         </ul>
                     </div>
                     <a className="text-3xl px-2 md:px-4 py-2 font-extrabold text-teal-600">AUH</a>
