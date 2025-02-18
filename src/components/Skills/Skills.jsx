@@ -5,7 +5,7 @@ import Card from "../../Shared/Card";
 
 const Skills = () => {
     return (
-        <div className="p-4 w-full md:w-11/12 mx-auto">
+        <div className="p-4 w-full">
             <h1 className="text-4xl font-bold text-teal-600 text-center col-span-1 md:col-span-2 lg:col-span-3 my-6">Skills</h1>
             <p className="text-center">I am proficient in a range of technologies that allow me <br /> to build efficient, scalable, and responsive web applications. <br /> My skills include: </p>
 

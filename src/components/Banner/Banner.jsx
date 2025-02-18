@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import hridayImg from '../../assets/hriday.png'
 import { motion } from 'framer-motion';
+import './Banner.css';
 
 const Banner = () => {
     const name = `
