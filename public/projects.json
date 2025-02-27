@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "SmartLearn",
+    "image": "https://i.ibb.co.com/7NTCjYjh/Smart-Learn-web.png",
+    "live_Link": "https://smart-learn-online-tutor.netlify.app",
+    "sourceCode": "https://github.com/ALHriday/smart-learn-online-tutor",
+    "features": ["Tutor Search", "User Accounts", "User-Friendly", "Dynamic UI/UX", "Responsive Design"],
+    "technologies_used": "HTML, CSS, Tailwind CSS, JavaScript, React, Daisy UI, Express JS, Firebase, MongoDB.",
+    "description": "SmartLearn is an innovative online education platform designed to connect students of all ages with expert tutors from around the world. It provides a seamless and personalized learning experience through interactive tools, tailored lesson plans, and 24/7 accessibility."
+  },
+  {
+    "id": 2,
+    "title": "Sportify Hub",
+    "image": "https://i.ibb.co.com/H3M2F2J/Sportify-Hub-Web2.png",
+    "live_Link": "https://sportify-hub-web.netlify.app",
+    "sourceCode": "https://github.com/ALHriday/Sportify-Hub",
+    "features": ["Showcase Projects", "Dynamic UI/UX", "User Authentication", "Responsive Design", "High-Quality Products"],
+    "technologies_used": "HTML, CSS, Tailwind CSS, JavaScript, React, Daisy UI, Express JS, Firebase, MongoDB.",
+    "description": "Sportify Hub is your ultimate destination for all things sports. From premium equipment and apparel to expert advice and a vibrant community, we’re dedicated to empowering athletes of all levels to achieve their best and embrace an active lifestyle."
+  },
+  {
+    "id": 3,
+    "title": "MediTrust Pharma",
+    "image": "https://i.ibb.co.com/NdjvgGnP/Medi-Trust-Pharma-web.png",
+    "live_Link": "https://meditrustpharma-web.netlify.app",
+    "sourceCode": "https://github.com/ALHriday/MediTrustPharma-Client-Side",
+    "features": ["Authentic Medicines", "Secure Payment", "Search Medicine Functionality", "Dynamic UI/UX", "Responsive Design"],
+    "technologies_used": "HTML, CSS, Tailwind CSS, JavaScript, React JS, Express JS, Firebase, MongoDB.",
+    "description": "MediTrustPharma is your trusted online platform for high-quality medicines and healthcare products. Dedicated to making healthcare accessible, affordable, and reliable, we offer a comprehensive range of prescription drugs, over-the-counter medications, and wellness products."
+  }
+]

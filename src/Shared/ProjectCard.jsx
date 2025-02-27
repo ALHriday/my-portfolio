@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import Marquee from "react-fast-marquee";
 
+
 const ProjectCard = ({ img, name, liveLink, sourceCode, projectName, projectDescription }) => {
     return (
         <motion.div
-        initial={{ opacity: 0, x: -160, y: 75 }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 1.6 }}>
+            initial={{ opacity: 0, x: -160, y: 75 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 1.6 }}>
             <div className="grid grid-cols-1 lg:grid-cols-5 border rounded-md">
                 <div className='flex flex-col p-4 bg-teal-600 col-span-3'>
                     <div className='rounded-md'>
@@ -42,16 +43,13 @@ const ProjectCard = ({ img, name, liveLink, sourceCode, projectName, projectDesc
                                 <a href={sourceCode}>
                                     <button className='btn mr-2 bg-teal-700 text-white'>Source Code</button>
                                 </a>
-                                <a href={liveLink}>
-                                    <button className='btn mr-2 bg-teal-700 text-white'>View Details</button>
-                                </a>
+                                <button className='btn mr-2 bg-teal-700 text-white'>View Details</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-            </motion.div>
+        </motion.div>
     );
 };
 
