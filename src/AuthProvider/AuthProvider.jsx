@@ -8,6 +8,11 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(true); // for PrivateRoute practice
     const [projectData, setProjectData] = useState([]);
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+    }, [theme])
 
     useEffect(() => {
         fetch('projects.json').then(res => res.json()).then(data => setProjectData(data)
@@ -19,7 +24,9 @@ const AuthProvider = ({ children }) => {
         setLoading,
         user,
         setUser,
-        projectData
+        projectData,
+        theme,
+        setTheme,
     }
 
     return (

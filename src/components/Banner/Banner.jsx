@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import hridayImg from '../../assets/hriday.png'
 import { motion } from 'framer-motion';
 import './Banner.css';
+import TypingEffect from '../TypingEffects/TypingEffect';
 
 const Banner = () => {
     const name = `
@@ -10,15 +11,24 @@ const Banner = () => {
           * Your Vision, My Code.
     `;
 
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 p-4 gap-6 md:gap-0">
             <div className="flex flex-col order-2 md:order-1 justify-center items-center md:items-start gap-3">
-                <motion.div
-                    initial={{ opacity: 0, y: -50 }} // starting state
-                    animate={{ opacity: 2, y: 0 }}    // animated state
-                    transition={{ duration: 1.5 }}    // transition settings
-                ><h1 className="text-4xl font-bold"><span className="text-teal-500">Web</span> Developer</h1>
-                </motion.div>
+                <h1 className="text-3xl font-bold">
+                    Hi, I am Hriday —<br />{" "}
+                    <TypingEffect
+                        words={[
+                            "Web Developer",
+                            "Frontend Developer",
+                            "Backend Developer",
+                            "Full Stack Developer",
+                        ]}
+                        typingSpeed={120}
+                        deleteSpeed={80}
+                        delay={1200}
+                    />
+                </h1>
 
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -78,7 +88,7 @@ const Banner = () => {
 
                 </div>
                 <div className="mt-2 md:mt-1">
-                    <Link className="btn md:btn-sm bg-teal-700 text-slate-200" to='https://drive.google.com/open?id=1WTi-O8jkmUePYvi48BOXAi_Fo5MW6NCB&usp=drive_fs'>Download Resume</Link>
+                    <Link className="btn md:btn-sm bg-teal-700 text-slate-200" to='https://drive.google.com/file/d/1ISO1lKQN-u-8qYvnTdjpzc5u1xUbzRnD/view?usp=sharing'>Download Resume</Link>
                 </div>
             </div>
 

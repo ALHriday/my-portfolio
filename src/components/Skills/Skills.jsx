@@ -10,7 +10,7 @@ const Skills = () => {
             <p className="text-center">I am proficient in a range of technologies that allow me <br /> to build efficient, scalable, and responsive web applications. <br /> My skills include: </p>
 
             <div className="mt-4 overflow-hidden">
-                <h1 className="text-3xl font-bold mb-2 py-2">FontEnd Tools</h1>
+                <h1 className="text-3xl font-bold mb-2 py-2">FrontEnd Tools</h1>
                 <Marquee pauseOnHover={true}>
                     <div className="flex gap-6">
                         <Card

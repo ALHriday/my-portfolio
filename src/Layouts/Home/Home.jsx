@@ -1,6 +1,5 @@
 import AboutMe from "../../components/About/AboutMe";
 import Banner from "../../components/Banner/Banner";
-// import Education from "../../components/Education/Education";
 import Projects from "../../components/Projects/Projects";
 import Skills from "../../components/Skills/Skills";
 

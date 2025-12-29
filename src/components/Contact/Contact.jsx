@@ -7,7 +7,7 @@ const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
 
         emailjs
             .sendForm(`${import.meta.env.VITE_EMAIL_JS_SERVICE_ID}`, `${import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID}`, form.current, {
@@ -22,7 +22,7 @@ const Contact = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    
+
                     e.target.user_name.value = '';
                     e.target.user_email.value = '';
                     e.target.message.value = '';
@@ -34,7 +34,7 @@ const Contact = () => {
                         icon: "error",
                         title: "Oops...",
                         text: "Something went wrong!",
-                      });
+                    });
                 },
             );
     };
@@ -46,11 +46,11 @@ const Contact = () => {
             </div>
             <form ref={form} onSubmit={sendEmail} className="py-2 flex flex-col gap-2">
                 <label className="text-white">Name:</label>
-                <input className="p-2 rounded-md" type="text" name="user_name" />
+                <input className="p-2 rounded-md" type="text" name="user_name" required />
                 <label className="text-white">Email:</label>
-                <input className="p-2 rounded-md" type="email" name="user_email" />
+                <input className="p-2 rounded-md" type="email" name="user_email" required />
                 <label className="text-white">Your Text:</label>
-                <textarea className="p-2 rounded-md min-h-[100px] max-h-[200px]" name="message"></textarea>
+                <textarea className="p-2 rounded-md min-h-[100px] max-h-[200px]" name="message" required></textarea>
                 <input className="btn mt-2 text-xl" type="submit" value='Send' />
             </form>
         </div>

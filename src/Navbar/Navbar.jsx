@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+    const { theme, setTheme } = useContext(AuthContext);
+    const [active, setActive] = useState('Home');
 
-    const [active, setActive] = useState('');
+    const route = ['Home', 'About', 'Contact'];
 
-    const route = ['home', 'about', 'contact'];
+    useEffect(() => {
+        const currentTheme = localStorage.getItem('theme');
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        localStorage.setItem('theme', theme);
+    }, [theme])
 
     return (
         <div className="sticky top-0 z-50">
@@ -29,26 +36,24 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {route.map((item, idx) => <li key={idx} onClick={() => setActive(item)} ><Link className={active === item ? 'border-b-2 border-teal-600' : ''} to={item}>
-                                {item.charAt(0).toUpperCase() + item.slice(1)}</Link></li>)}
+                            {route.map((item, idx) => <Link key={idx} onClick={() => setActive(item)} className={active === item ? 'border-b-2 border-teal-600' : ''} to={item}><li>
+                                {item}</li></Link>)}
                         </ul>
                     </div>
-                    <a className="text-3xl px-2 md:px-4 py-2 font-extrabold text-teal-600">AUH</a>
+                    <a className="text-3xl px-2 md:px-4 py-2 font-extrabold text-teal-500">AUH</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
 
                     <ul className="flex gap-4">
-                    {route.map((item, idx) => <li key={idx} onClick={() => setActive(item)} ><Link className={active === item ? 'border-b-2 border-teal-600 py-1' : 'py-1'} to={item}>{item.charAt(0).toUpperCase() + item.slice(1)}</Link></li>)}
+                        {route.map((item, idx) => <Link key={idx} onClick={() => setActive(item)} to={item}><li className={active === item ? 'border-b-2 border-teal-600' : ''}>{item}</li></Link>)}
                     </ul>
                 </div>
 
                 <div className="navbar-end gap-4">
                     <div>
                         <label className="swap swap-rotate">
-                            {/* this hidden checkbox controls the state */}
-                            <input type="checkbox" className="theme-controller" value='light' />
+                            <input onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} type="checkbox" className="theme-controller" value={theme} />
 
-                            {/* sun icon */}
                             <svg
                                 className="swap-off h-10 w-10 fill-current"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +72,7 @@ const Navbar = () => {
                             </svg>
                         </label>
                     </div>
-                    <Link className="btn btn-md bg-teal-700 text-slate-100 hidden sm:flex" to='https://drive.google.com/open?id=1WTi-O8jkmUePYvi48BOXAi_Fo5MW6NCB&usp=drive_fs'>Download Resume</Link>
+                    <Link className="btn btn-md bg-teal-700 text-slate-100 hidden sm:flex" to='https://drive.google.com/file/d/1ISO1lKQN-u-8qYvnTdjpzc5u1xUbzRnD/view?usp=sharing'>Download Resume</Link>
                 </div>
             </div>
         </div>
